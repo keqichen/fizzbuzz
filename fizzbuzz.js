@@ -1,24 +1,30 @@
-console.log("1");
-console.log("2");
+//Define an object
 
-for(let i=1;i<=100;i++){
-    var string3 = "fizz";
-    var string5 = "buzz";
-    var string7 = "bang";
-    var string11 = "else";
-    if (i%5==0 && i%3==0){
-        console.log(string3+string5)
-    }else if(i%5==0){
-        console.log(string5)
-    }else if(i%3==0){
-        console.log(string3)
-    }else if(i%7==0){
-        console.log(string7)
-    }else if(i%11==0){
-        console.log(string11)
-    }else{console.log(i);
+for (let i=1;i<=150;i++){
+
+    let numberStringPairs = {
+        3:"fizz",
+        5:"buzz",
+        7:"bang",
+        11:"wow"
+    };
+
+    let counter=0;
+    let array=[];
+
+    for (let key in numberStringPairs){
+        if (i % key == 0){
+            counter++;
+            array.push(numberStringPairs[key]);
+        }
+    }
+
+    if (counter==2){
+        console.log(array[0]+array[1]);
+    }else if (counter==1){
+        console.log(array[0]);
+    }else{
+        console.log(i);
     }
 }
-
-
 
