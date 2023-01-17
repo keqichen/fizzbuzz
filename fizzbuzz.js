@@ -14,15 +14,12 @@ for (let i=1;i<=150;i++){
 
     for (let key in numberStringPairs){
         if (i % key == 0){
-            counter++;
-            array.push(numberStringPairs[key]);
+            array.join(numberStringPairs[key]);
         }
     }
 
-    if (counter==2){
-        console.log(array[0]+array[1]);
-    }else if (counter==1){
-        console.log(array[0]);
+    if (array.length !==0){
+        console.log(array);
     }else{
         console.log(i);
     }
