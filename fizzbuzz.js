@@ -9,7 +9,6 @@ for (let i=1;i<=150;i++){
         11:"wow"
     };
 
-    let counter=0;
     let array=[];
 
     for (let key in numberStringPairs){
